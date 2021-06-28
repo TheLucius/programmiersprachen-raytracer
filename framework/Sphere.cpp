@@ -36,3 +36,8 @@ float Sphere::volume ()const {
     float volume = (4/3)*M_PI * (pow(radius, 3));
     return volume;
 }
+
+std::ostream& Sphere::print(std::ostream& string)const{
+    Shape::print(string);
+    std::cout<<"cen: "<<center.x<<center.y<<center.z<<" "<<"Radius: "<<radius;
+}

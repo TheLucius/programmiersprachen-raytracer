@@ -1,4 +1,4 @@
-//float radius
+//
 // Created by lucius on 28.06.21.
 //
 
@@ -20,6 +20,7 @@ public:
     ~Sphere();
     float area()const override;
     float volume()const override;
+    std::ostream& print (std::ostream& string)const override;
 
     glm::vec3 center;
     float radius;
