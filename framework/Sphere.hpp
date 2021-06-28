@@ -6,16 +6,23 @@
 #define RAYTRACER_SPHERE_HPP
 #include "Shape.hpp"
 #include "glm/vec3.hpp"
-using namespace glm;
+#include "color.hpp"
+
 
 
 class Sphere : public Shape{
 public:
-    vec3 center;
-    float radius;
+    //constructors
+    Sphere();
+    Sphere(glm::vec3 center, float r);
+    Sphere(glm::vec3 center, float radius, std::string name, Color farbe);
+    //tidy up
+    ~Sphere();
+    float area(float radius)const override;
+    float volume(float radius)const override;
 
-    float area(float radius);
-    float volume(float radius);
+    glm::vec3 center;
+    float radius;
 };
 
 
