@@ -27,12 +27,12 @@ Sphere::~Sphere() {
 }
 
 //area function
-float Sphere::area (float radius)const {
+float Sphere::area ()const {
     float area =4*M_PI* pow(radius,2);
     return area;
 }
 //volume function
-float Sphere::volume (float radius)const {
-    float volume =4/3*M_PI * pow(radius, 3);
+float Sphere::volume ()const {
+    float volume = (4/3)*M_PI * (pow(radius, 3));
     return volume;
 }

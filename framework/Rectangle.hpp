@@ -6,21 +6,25 @@
 #define RAYTRACER_RECTANGLE_HPP
 #include "Shape.hpp"
 #include "glm/vec3.hpp"
-
-using namespace glm;
+#include "color.hpp"
 
 
 class Rectangle : public Shape{
 public:
-    Rectangle():
-    min(3,3,3), max(6,6,6){}
-    Rectangle(vec3 const& min, vec3 const& max):
-    min{min}, max{max}{};
-    float area();
-    float volume();
+    //default
+    Rectangle();
+    //given points
+    Rectangle(glm::vec3 mini, glm::vec3 maxi);
+    //given points, name and color
+    Rectangle(glm::vec3 min, glm::vec3 max, std::string name, Color farbe);
 
-    vec3 min;
-    vec3 max;
+    //tidy up
+    ~Rectangle();
+
+    float area()const override;
+    float volume()const override;
+    glm::vec3 min_;
+    glm::vec3 max_;
 };
 
 

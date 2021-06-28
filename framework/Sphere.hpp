@@ -1,4 +1,4 @@
-//
+//float radius
 // Created by lucius on 28.06.21.
 //
 
@@ -18,8 +18,8 @@ public:
     Sphere(glm::vec3 center, float radius, std::string name, Color farbe);
     //tidy up
     ~Sphere();
-    float area(float radius)const override;
-    float volume(float radius)const override;
+    float area()const override;
+    float volume()const override;
 
     glm::vec3 center;
     float radius;

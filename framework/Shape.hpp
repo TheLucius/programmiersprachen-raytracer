@@ -15,14 +15,16 @@ public:
     ~Shape();
     //pure virtual methods
 
-    virtual float area(float)const=0;
-    virtual float volume(float)const=0;
+    virtual float area()const=0;
+    virtual float volume()const=0;
+    virtual std::ostream& print(std::ostream& shapes)const;
 
 protected:
     Color color_;
     std::string name_;
 };
 
+std::ostream& operator<<(std::ostream& shapes, Shape const& string);
 
 
 #endif //RAYTRACER_SHAPE_HPP
